@@ -7,8 +7,8 @@ const Image = styled.img`
 `
 
 
-const LogoFooter =()=>{
-	return(
+const LogoFooter = () => {
+	return (
 		<Image src="https://uploads-ssl.webflow.com/5c0b0a3081ab9e82bf9b80b4/5c0b0a3081ab9e88949b8145_ehalah-logo.png" />
 	)
 }

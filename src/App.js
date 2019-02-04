@@ -15,10 +15,10 @@ class App extends Component {
         <Router>
           <div>
             <Header />
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/leaderboard" component={Leaderboard} />
-            <Route exact path="/chat" component={Chat} />
-            <Route exact path="/analytics" component={Analytics} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/leaderboard" component={Leaderboard} />
+            <Route path="/chat/:id?" component={Chat} />
+            <Route path="/analytics" component={Analytics} />
             <Route exact path="/" render={() => (<Redirect to="/dashboard" />)} />
           </div>
         </Router>

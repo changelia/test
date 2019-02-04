@@ -15,6 +15,9 @@ const Span = styled.span`
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+  @media(max-width: 768px){
+    display: none;
+  }
 `
 const Div = styled.div`
 	display: flex;
@@ -38,12 +41,11 @@ class Profile extends Component {
     toggle: false
   }
 
-  toggleMenu = (e) => {
+  toggleMenu = () => {
     this.setState({
       toggle: !this.state.toggle
     })
   }
-
 
   render() {
     return (

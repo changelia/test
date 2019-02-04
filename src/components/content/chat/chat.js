@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import styled from 'styled-components'
-import BlueContainer from '../container'
 
+import BlueContainer from '../container'
 import TabBlock from './components/tabBlock'
 import SmsBlock from './components/smsblock'
 
@@ -16,23 +17,25 @@ const Container = styled.div`
 	width: 100%;
 	background: #fff;
 	display: flex;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .14), inset 0 -1px 0 0 #ddd;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .14), inset 0 -1px 0 0 #ddd;
 `
 
 class Chat extends Component {
-	render() {
-		return (
-			<Section>
-				<BlueContainer />
-				<Div>
-					<Container>
-						<TabBlock />
-						<SmsBlock />
-					</Container>
-				</Div>
-			</Section>
-		);
-	}
+  render() {
+    return (
+      <Section>
+        <BlueContainer />
+        <Div>
+          <Router>
+            <Container>
+              <TabBlock />
+              <SmsBlock />
+            </Container>
+          </Router>
+        </Div>
+      </Section>
+    );
+  }
 }
 
 export default Chat;

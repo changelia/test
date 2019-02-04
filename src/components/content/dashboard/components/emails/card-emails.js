@@ -15,7 +15,11 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-	background-color: #fff;
+  background-color: #fff;
+  @media(max-width:1120px){
+    width: 100%;
+    margin-right: 0;
+  }
 `
 const BottomGradient = styled.div`
 	position: absolute;

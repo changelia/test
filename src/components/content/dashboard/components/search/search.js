@@ -22,6 +22,12 @@ const Input = styled.input`
   color: #333333;
   border: 1px solid #cccccc;
   outline: none;
+  @media(max-width:1200px){
+    width: 400px;
+  }
+  @media(max-width:992px){
+    width: 350px;
+  }
 `
 const Button = styled.button`
   position: relative;

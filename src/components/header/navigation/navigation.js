@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import { withRouter } from "react-router";
+import { NavLink } from "react-router-dom";
 import styled from 'styled-components'
 
 const Nav = styled.nav``
@@ -12,6 +11,12 @@ const Li = styled.li`
 	list-style: none;
 	width: 200px;
 	height: 64px;
+	@media(max-width:1200px){
+    width: 170px;
+  }
+	@media(max-width: 992px){
+    width: 150px;
+  }
 	a{
 		position: relative;
 		display: flex;
@@ -19,20 +24,9 @@ const Li = styled.li`
 	 	align-items: center;
 	 	width: 100%;
 	 	height: 100%;
-	 	color: ${color => color.active ? '#30aabc' : 'white'};
+	 	color: white;
 		text-decoration: none;
-		::after{
-			content: '';
-			position: absolute;
-			bottom: -2px;
-			width: 0px;
-			height: 0px;
-			border-style: none solid solid;
-			border-width: 0px 8px 10px;
-			border-color: #000 transparent ${color => color.active ? '#30aabc' : 'transparent'};
-			background-color: transparent;
 		}
-	}
 `
 const Border = styled.div`
 	position: absolute;
@@ -48,9 +42,7 @@ const Div = styled.div`
 	font-size: 30px;
 	font-weight: 300;
 `
-const Span = styled.span`
-
-`
+const Span = styled.span``
 
 const links = [
   { path: '/dashboard', title: "Dashboard", icon: 'far fa-address-card' },
@@ -59,19 +51,19 @@ const links = [
   { path: '/analytics', title: "Analytics", icon: 'fas fa-chart-line' },
 ]
 
-const Navigation = ({ location }) => {
+const Navigation = () => {
   return (
     <Nav>
       <Ul>
         {links.map(link => (
-          <Li active={location.pathname === link.path} key={link.path}>
-            <Link to={link.path} >
+          <Li key={link.path}>
+            <NavLink to={link.path} >
               <Div>
                 <i className={link.icon}></i>
               </Div>
               <Span>{link.title}</Span>
               <Border />
-            </Link>
+            </NavLink>
           </Li>
         ))}
       </Ul>
@@ -79,4 +71,4 @@ const Navigation = ({ location }) => {
   )
 }
 
-export default withRouter(Navigation)
+export default Navigation

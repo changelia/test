@@ -15,14 +15,23 @@ code {
 }
 
 .active{
-  color: red !important;
-  position: relative;
+  color: #30aabc !important;
 }
 .active::after{
-      content:'';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: 0;
-      background: red;
-    }
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 0px;
+  height: 0px;
+  border-style: none solid solid;
+  border-width: 0px 8px 10px;
+  border-color: #000 transparent  #30aabc;
+  background-color: transparent;
+}
+
+.tabActive{
+  background: #f5f5f5;
+}
+.messege{
+  background: #84c9eb2b;
+}

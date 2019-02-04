@@ -12,27 +12,15 @@ const Percentage = styled.div`
 	display: flex;
 	align-items: center;
   margin-bottom: 20px;
-  border-left: 15px solid #8ccc88;
+  border-left: 15px solid ${({borderColor})=>(borderColor)};
 	height: 15px;
-	:nth-child(2){
-		border-left: 15px solid #5978a1;
-	}
-	:nth-child(3){
-		border-left: 15px solid #e17d70;
-	}
 `
 const Number = styled.span`
 	margin-right: 10px;
 	margin-left: 10px;
 	font-size: 18px;
 	font-weight: 600;
-	color: #8ccc88;
-	:nth-child(2){
-		color: #5978a1;
-	}
-	:nth-child(3){
-		color: #e17d70;
-	}
+	color: ${p=>(p.color)};
 `
 const Person = styled.span`
 	color: #333;
@@ -61,16 +49,16 @@ const Text = styled.p`
 const AmountUsers = () => {
   return (
     <Div>
-      <Percentage>
-        <Number>67.9%</Number>
+      <Percentage borderColor="#8ccc88">
+        <Number color="#8ccc88">67.9%</Number>
         <Person>Employees</Person>
       </Percentage>
-      <Percentage>
-        <Number>25%</Number>
+      <Percentage borderColor="#5978a1">
+        <Number color="#5978a1">25%</Number>
         <Person>Recruiter</Person>
       </Percentage>
-      <Percentage>
-        <Number>7.1%</Number>
+      <Percentage borderColor="#e17d70">
+        <Number color="#e17d70">7.1%</Number>
         <Person>Admin</Person>
       </Percentage>
       <Block>

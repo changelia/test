@@ -12,6 +12,10 @@ const Div = styled.div`
 	margin-left: 0px;
 	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .14), inset 0 -1px 0 0 #ddd;
 	background: #fff;
+	@media(max-width:1120px){
+		width: 100%;
+		margin-right: 0;
+  }
 `
 
 const Block = ({ width }) => {

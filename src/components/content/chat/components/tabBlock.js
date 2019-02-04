@@ -13,12 +13,12 @@ const NewEmailBnt = styled.a`
 	position: absolute;
 	top: 30px;
 	width: 85%;
-    height: 40px;
-    border-radius: 300px;
-    background-color: #ff503a;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
+	height: 40px;
+	border-radius: 300px;
+	background-color: #ff503a;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
 	display: flex;
 	justify-content:center;
 	align-items:center;

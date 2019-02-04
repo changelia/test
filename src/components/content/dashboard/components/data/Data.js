@@ -17,6 +17,9 @@ const Div = styled.div`
 	flex-direction: column;
   border-radius: 4px;
   background-color: #fff;
+  @media(max-width:1120px){
+    width: 100%;
+  }
 `
 
 class Emails extends Component {
